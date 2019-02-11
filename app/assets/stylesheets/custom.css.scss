@@ -143,6 +143,22 @@ html {
       }
     }
     
-  .informacoes {
-    line-height: 0.8em !important;
+  .colororange {
+    color: #F2711C !important;
+  }
+  
+  .letramenor {
+    font-size: 1em !important;
+  }
+  
+  .colorwhite {
+    color: rgb(255, 255, 255) !important;
+  }
+  
+  .ui.orange.segment {
+    background-color: black !important;
+  }
+  
+  .ui.dividing.header.orangeline {
+    border-bottom: 2px solid #F2711C !important;
   }
