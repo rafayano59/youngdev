@@ -73,7 +73,7 @@ html {
       margin-left: 0.5em;
     }
     .masthead h1.ui.header {
-      margin-top: 3em;
+      margin-top: 2.2em;
       margin-bottom: 0em;
       font-size: 4em;
       font-weight: normal;
@@ -84,7 +84,7 @@ html {
     }
 
     .ui.vertical.stripe {
-      padding: 8em 0em;
+      padding: 4em 0em;
     }
     .ui.vertical.stripe h3 {
       font-size: 2em;
@@ -143,3 +143,6 @@ html {
       }
     }
     
+  .informacoes {
+    line-height: 0.8em !important;
+  }

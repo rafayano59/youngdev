@@ -17,18 +17,28 @@
 //= require semantic-ui
 //= require_tree .
 
+    window.onbeforeunload = function () {
+        window.scrollTo(0,0);
+};
+
   $(document)
     .ready(function() {
 
       // fix menu when passed
-      $('.masthead')
+      $('.bottomjs')
         .visibility({
           once: false,
           onBottomPassed: function() {
-            $('.fixed.menu').transition('fade in');
+            $('.fixed.menu').transition({
+              animation : 'fade down in',
+              duration : '1s'
+            });
           },
           onBottomPassedReverse: function() {
-            $('.fixed.menu').transition('fade out');
+            $('.fixed.menu').transition({
+            animation  : 'fade down out',
+            duration   : '1s'
+            });
           }
         })
       ;
@@ -37,6 +47,58 @@
       $('.ui.sidebar')
         .sidebar('attach events', '.toc.item')
       ;
+      
+      // gradually change color home
+      $('.telapreta')
+        .visibility({
+           once       : false,
+           continuous : true,
+          onPassing  : function(calculations) {
+            var newColor = 'rgba(0, 0, 0, ' + ( 1 - calculations.percentagePassed ) +')';
+            $(this).css('background-color', newColor);
+          }
+        });
+        
+      //entrada fade home
+      
+      $('.entrada')
+        .transition({
+          animation  : 'fade in',
+          duration   : '5s'
+        });
+        
+      //fade right home
+      
+      $('.faderight')
+        .visibility({
+          once: true,
+          onTopVisible: function() {
+            $('.faderight')
+              .transition({
+                animation  : 'fade right in',
+                duration   : '2s'
+              })
+            ;
+          },
+          onBottomPassed: function() {
+            $('.faderight')
+              .transition({
+                animation  : 'fade right in',
+                duration   : '2s'
+              })
+            ;
+          }
+        });  
+        
 
-    })
-  ;
+      //fade left home
+      
+      $('.fadeleft')
+        .transition({
+          animation  : 'fade left in',
+          duration   : '2s'
+        });
+
+
+    });
+    
