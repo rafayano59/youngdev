@@ -1,4 +1,8 @@
 @import "semantic-ui";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 
 element.style {
 }
@@ -16,7 +20,7 @@ body {
     overflow-x: hidden;
     min-width: 320px;
     background: #FFFFFF;
-    font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-family: 'Raleway', 'Open Sans','Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
     font-size: 14px;
     line-height: 1.4285em;
     color: rgba(0, 0, 0, 0.87);
@@ -161,4 +165,16 @@ html {
   
   .ui.dividing.header.orangeline {
     border-bottom: 2px solid #F2711C !important;
+  }
+  
+  .ui.header {
+    font-family: 'Raleway', 'Open Sans','Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5 {
+    font-family: 'Raleway', 'Open Sans','Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  }
+  
+  .ui.text.container {
+    font-family: 'Raleway', 'Open Sans','Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   }
