@@ -94,11 +94,116 @@
       //fade left home
       
       $('.fadeleft')
-        .transition({
-          animation  : 'fade left in',
-          duration   : '2s'
-        });
-
-
+        .visibility({
+          once: true,
+          onTopVisible: function() {
+            $('.fadeleft')
+              .transition({
+                animation  : 'fade left in',
+                duration   : '2s'
+              })
+            ;
+          },
+          onBottomPassed: function() {
+            $('.fadeleft')
+              .transition({
+                animation  : 'fade left in',
+                duration   : '2s'
+              })
+            ;
+          }
+        });  
+        
+        
+      //fly left home
+      
+      $('.flyleft')
+        .visibility({
+          once: true,
+          onTopVisible: function() {
+            $('.flyleft')
+              .transition({
+                animation  : 'fly left in',
+                duration   : '1s'
+              })
+            ;
+          },
+          onBottomPassed: function() {
+            $('.flyleft')
+              .transition({
+                animation  : 'fly left in',
+                duration   : '1s'
+              })
+            ;
+          }
+        });  
+        
+      //fly right home
+      
+      $('.flyright')
+        .visibility({
+          once: true,
+          onTopVisible: function() {
+            $('.flyright')
+              .transition({
+                animation  : 'fly right in',
+                duration   : '1s'
+              })
+            ;
+          },
+          onBottomPassed: function() {
+            $('.flyright')
+              .transition({
+                animation  : 'fly right in',
+                duration   : '1s'
+              })
+            ;
+          }
+        });  
+        
+      $('.tadahome')
+        .visibility({
+          once: true,
+          onTopVisible: function() {
+            $('.tadahome')
+              .transition({
+                animation  : 'fade in',
+                duration   : '1s'
+              })
+            ;
+          },
+          onBottomPassed: function() {
+            $('.tadahome')
+              .transition({
+                animation  : 'fade in',
+                duration   : '1s'
+              })
+            ;
+          }
+        });  
+        
+        
+        $('.tada2home')
+        .visibility({
+          once: true,
+          onTopVisible: function() {
+            $('.tada2home')
+              .transition({
+                animation  : 'fade in',
+                duration   : '1s'
+              })
+            ;
+          },
+          onBottomPassed: function() {
+            $('.tada2home')
+              .transition({
+                animation  : 'fade in',
+                duration   : '1s'
+              })
+            ;
+          }
+        }); 
+        
+        
     });
     
