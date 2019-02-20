@@ -13,6 +13,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    google-site-verification: googlea3312113c0ad1cb5.html
   </head>
 
 <body>
@@ -24,12 +25,10 @@
       <%= image_tag("logo.png", :alt => "YoungDev logo", :class => "ui large bordered rounded image", :style=> "width:150px") %>
     </div>
     <div class="item">
-      <div class="ui animated orange button" tabindex="0">
-        <div class="visible content">Solicite seu orçamento</div>
-        <div class="hidden content">
-          <i class="right arrow icon"></i>
-        </div>
-      </div>
+      <button class="ui right labeled icon orange button">
+        <i class="right arrow icon"></i>
+        Solicite seu orçamento
+      </button>
     </div>
     <div class="right menu">
       <a class="active item">Início</a>

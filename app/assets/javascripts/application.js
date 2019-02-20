@@ -28,13 +28,13 @@
       $('.bottomjs')
         .visibility({
           once: false,
-          onBottomPassed: function() {
+          onTopPassed: function() {
             $('.fixed.menu').transition({
               animation : 'fade down in',
               duration : '1s'
             });
           },
-          onBottomPassedReverse: function() {
+          onTopPassedReverse: function() {
             $('.fixed.menu').transition({
             animation  : 'fade down out',
             duration   : '1s'
@@ -56,8 +56,10 @@
           onPassing  : function(calculations) {
             var newColor = 'rgba(0, 0, 0, ' + ( 1 - calculations.percentagePassed ) +')';
             $(this).css('background-color', newColor);
+            $('.telapreta2').css('background-color', newColor);
           }
         });
+        
         
       //entrada fade home
       
@@ -70,17 +72,10 @@
       //fade right home
       
       $('.faderight')
+        .transition('hide')
         .visibility({
           once: true,
           onTopVisible: function() {
-            $('.faderight')
-              .transition({
-                animation  : 'fade right in',
-                duration   : '2s'
-              })
-            ;
-          },
-          onBottomPassed: function() {
             $('.faderight')
               .transition({
                 animation  : 'fade right in',
@@ -94,6 +89,7 @@
       //fade left home
       
       $('.fadeleft')
+        .transition('hide')
         .visibility({
           once: true,
           onTopVisible: function() {
@@ -103,76 +99,40 @@
                 duration   : '2s'
               })
             ;
-          },
-          onBottomPassed: function() {
-            $('.fadeleft')
-              .transition({
-                animation  : 'fade left in',
-                duration   : '2s'
-              })
-            ;
           }
         });  
-        
-        
+       
+      
       //fly left home
       
-      $('.flyleft')
+      $('.center.aligned.row')
         .visibility({
           once: true,
           onTopVisible: function() {
-            $('.flyleft')
+            $('.center.aligned.row .flyleft')
               .transition({
-                animation  : 'fly left in',
+                animation  : 'bounce',
                 duration   : '1s'
               })
             ;
-          },
-          onBottomPassed: function() {
-            $('.flyleft')
+            $('.center.aligned.row .flyright')
               .transition({
-                animation  : 'fly left in',
+                animation  : 'bounce',
                 duration   : '1s'
               })
             ;
           }
-        });  
-        
-      //fly right home
+        }); 
+
       
-      $('.flyright')
-        .visibility({
-          once: true,
-          onTopVisible: function() {
-            $('.flyright')
-              .transition({
-                animation  : 'fly right in',
-                duration   : '1s'
-              })
-            ;
-          },
-          onBottomPassed: function() {
-            $('.flyright')
-              .transition({
-                animation  : 'fly right in',
-                duration   : '1s'
-              })
-            ;
-          }
-        });  
         
+      
+      
+      
       $('.tadahome')
         .visibility({
           once: true,
           onTopVisible: function() {
-            $('.tadahome')
-              .transition({
-                animation  : 'fade in',
-                duration   : '1s'
-              })
-            ;
-          },
-          onBottomPassed: function() {
             $('.tadahome')
               .transition({
                 animation  : 'fade in',
@@ -187,14 +147,6 @@
         .visibility({
           once: true,
           onTopVisible: function() {
-            $('.tada2home')
-              .transition({
-                animation  : 'fade in',
-                duration   : '1s'
-              })
-            ;
-          },
-          onBottomPassed: function() {
             $('.tada2home')
               .transition({
                 animation  : 'fade in',

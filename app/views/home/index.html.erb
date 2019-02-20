@@ -1,6 +1,5 @@
 <!-- Page Contents -->
 <div class="pusher">
-  <div class="bottomjs">
   <div class="ui inverted vertical masthead center aligned segment telapreta">
 
     <div class="ui container">
@@ -20,12 +19,12 @@
     </div>
     
 
-    <div class="ui text container entrada">
+    <div class="ui text container entrada bottomjs">
       <h1 class="ui inverted header">
         Young Developments
       </h1>
       <h2>Aplicações Web personalizadas a você.</h2>
-      <div class="ui animated huge inverted orange button" tabindex="0">
+      <div class="ui animated fade huge inverted orange button" tabindex="0">
         <div class="visible content">Solicite seu orçamento</div>
         <div class="hidden content">
           <i class="right arrow icon"></i>
@@ -34,16 +33,16 @@
     </div>
 
   </div>
-  </div>
+  
+  
 
-  <div class="ui vertical stripe segment">
+  <div class="ui vertical stripe segment telapreta2">
     <h4 class="ui horizontal header divider">
-        <p class="colororange">Por que trabalhar conosco?</p>
-      </h4>
+      <p class="colororange">Por que nós?</p>
+    </h4>
     <div class="ui middle aligned stackable grid container">
       <div class="row">
-        <div class="eight wide column faderight">
-          <div class="faderightvisibletop"></div>
+        <div class="eight wide hidden column faderight">
           <h3 class="ui dividing header orangeline">O seu negócio em primeiro lugar</h3>
           <p>Nós faremos do seu jeito, mas vamos além disso. 
           Analisaremos as reais necessidades do seu negócio, 
@@ -51,10 +50,8 @@
           <h3 class="ui dividing header orangeline">Apoio no presente e no futuro</h3>
           <p>A nossa agência trata os clientes como verdadeiros parceiros de negócio, 
           prestando o suporte necessário durante todo o projeto e também após sua conclusão, com ajustes, manutenções e atualizações.</p>
-          <div class="faderightvisiblebottom"></div>
         </div>
-        <div class="eight wide right floated column fadeleft">
-          <div class="fadeleftvisible"></div>
+        <div class="eight wide right floated hidden column fadeleft">
           <%= image_tag("trabalho-computador2.jpg", :alt => "trabalho computador", :class => "ui large bordered rounded image", :style=> "width:680px") %>
         </div>
       </div>
@@ -66,16 +63,16 @@
   <div class="ui vertical stripe quote black inverted segment">
     <div class="ui equal width stackable internally celled grid">
       <div class="center aligned row">
-        <div class="flyleft column">
+        <div class="flyright column">
           <h3>"Trabalho muito bem prestado."</h3>
           <p class="colororange">O que dizem sobre nós</p>
         </div>
-        <div class="flyright column">
-          <h3>"Prestaram suporte do início ao fim"</h3>
-          <p class="colororange">
-            <%= image_tag("img_avatar.png", :alt => "avatar ceo", :class => "ui avatar image") %>
-            <b>CEO</b> da empresa X
-          </p>
+        <div class="flyleft column">
+            <h3>"Prestaram suporte do início ao fim"</h3>
+            <p class="colororange">
+              <%= image_tag("img_avatar.png", :alt => "avatar ceo", :class => "ui avatar image") %>
+              <b>CEO</b> da empresa X
+            </p>
         </div>
       </div>
     </div>
@@ -83,7 +80,7 @@
 
   <div class="ui vertical stripe segment">
     <div class="ui text container">
-      <div class="ui orange segment tadahome">
+      <div class="ui orange hidden segment tadahome">
         <h3 class="ui header colororange">Sua empresa precisa de nossos serviços</h3>
         <p class="colorwhite">
           Não vamos falar apenas do nosso trabalho duro e ideias inovadoras.<br>
@@ -102,7 +99,7 @@
       <h4 class="ui horizontal header divider">
         <p class="colororange letramenor">Case Studies</p>
       </h4>
-      <div class="ui orange segment tada2home">
+      <div class="ui orange segment tada2home ">
         <h3 class="ui header colororange">Otimize tempo e dinheiro</h3>
         <p class="colorwhite">Utilizamos a linguagem Ruby on Rails para a construção de sites e aplicações Web, o que torna o processo de programação muito mais rápido, sem perda de qualidade ou performance do produto oferecido.</p>
         <a class="ui center inverted orange button">Leia mais</a>
