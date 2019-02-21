@@ -56,7 +56,6 @@
           onPassing  : function(calculations) {
             var newColor = 'rgba(0, 0, 0, ' + ( 1 - calculations.percentagePassed ) +')';
             $(this).css('background-color', newColor);
-            $('.telapreta2').css('background-color', newColor);
           }
         });
         
