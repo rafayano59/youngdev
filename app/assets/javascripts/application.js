@@ -68,6 +68,7 @@
           duration   : '5s'
         });
         
+        
       //fade right home
       
       $('.faderight')
