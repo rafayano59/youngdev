@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 @import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Nunito');
 
 element.style {
 }
@@ -159,12 +160,16 @@ html {
     color: rgb(255, 255, 255) !important;
   }
   
-  .ui.orange.segment {
-    background-color: black !important;
-  }
-  
   .ui.dividing.header.orangeline {
     border-bottom: 2px solid #F2711C !important;
+  }
+  
+  .ui.dividing.header.whiteline {
+    border-bottom: 2px solid white !important;
+  }
+  
+  .ui.dividing.header.blueline {
+    border-bottom: 2px solid #06adc0 !important;
   }
   
   .ui.header {
@@ -193,33 +198,86 @@ html {
   font-size: 1.22rem;
 }
 
-.telapreta2 {
-  padding-top: 0px !important;
-  padding-bottom: 75px !important;
-}
 
-.centeritem {
-  display: block !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  width: 20% !important;
-}
-
-.ui.move.reveal .hidden.content{
-    -webkit-transform: translateX(-100%)!important;
-    -ms-transform: translateX(-100%)!important;
-    transform: translateX(-100%)!important;
-}
-.ui.move.reveal:hover .hidden.content{
-    -webkit-transform: translateX(1%)!important;
-    -ms-transform: translateX(1%)!important;
-    transform: translateX(1%)!important;
-}
-.ui.move.reveal>.content {
-    display: block!important;
-}
 
 .flyleft, .flyright {
   padding-top: 3em !important;
   padding-bottom: 3em !important;
+}
+
+.bgsalmao {
+  background-color:	#f05924 !important;
+  width: 100% !important;
+}
+
+.faderight {
+  padding-left: 3em !important;
+}
+
+.letragray {
+  color: #777;
+}
+
+.letragrayclaro {
+  color: rgb(200,200,200);
+}
+
+.graybg {
+  background-color: rgb(80, 80, 80) !important;
+}
+
+.bgsalmao2 {
+  background-color:	#f05924 !important;
+}
+
+.bgazulbebe2 {
+  background-color:	#06adc0 !important;
+}
+
+.colorazul {
+  color: #06adc0;
+}
+
+.centeritem {
+  width: 20%;
+}
+
+.paddingbottomzero {
+  padding-bottom: 0px !important;
+}
+
+.paddingtopzero {
+  padding-top: 0px !important;
+}
+
+.paddingtop1 {
+  padding-top: 1em !important;
+}
+
+.marginzero {
+  margin: 0em !important;
+}
+
+.paddingbottom2 {
+  padding-bottom: 2em !important;
+}
+
+.paddingtop2 {
+  padding-top: 2em !important;
+}
+
+.headers {
+  font-size: 1.22em !important;
+}
+
+.marginbottom3 {
+  margin-bottom: 5em !important;
+}
+
+.bgwhite {
+  background-color: white !important;
+}
+
+.robotoslab {
+  font-family: "Nunito" !important;
 }
