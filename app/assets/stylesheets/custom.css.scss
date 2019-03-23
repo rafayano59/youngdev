@@ -5,10 +5,12 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
-element.style {
-}
 body.pushable {
-    background: #545454 !important;
+    background: black !important;
+}
+
+body.pushable> .pusher {
+    background: black !important;
 }
 .pushable {
     height: 100%;
@@ -16,11 +18,11 @@ body.pushable {
     padding: 0em !important;
 }
 body {
+    background: black !important;
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
     min-width: 320px;
-    background: #FFFFFF;
     font-family: 'Raleway', 'Open Sans','Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
     font-size: 14px;
     line-height: 1.4285em;
@@ -68,8 +70,8 @@ html {
     }
 
     .masthead.segment {
-      min-height: 700px;
-      padding: 1em 0em;
+      min-height: 800px;
+      padding: 0em 0em;
     }
     .masthead .logo.item img {
       margin-right: 1em;
@@ -148,8 +150,8 @@ html {
       }
     }
     
-  .colororange {
-    color: #F2711C !important;
+  .colorpurple {
+    color: purple !important;
   }
   
   .letramenor {
@@ -157,19 +159,23 @@ html {
   }
   
   .colorwhite {
-    color: rgb(255, 255, 255) !important;
+    color: rgba(255, 255, 255, 0.85) !important;
   }
   
-  .ui.dividing.header.orangeline {
+  .orangeline {
     border-bottom: 2px solid #F2711C !important;
   }
   
-  .ui.dividing.header.whiteline {
+  .whiteline {
     border-bottom: 2px solid white !important;
   }
   
-  .ui.dividing.header.blueline {
+  .blueline {
     border-bottom: 2px solid #06adc0 !important;
+  }
+  
+  .grayline {
+    border-bottom: 2px solid #777 !important;
   }
   
   .ui.header {
@@ -185,9 +191,60 @@ html {
   }
 
 
+.principal {
+  position: absolute !important;
+  z-index: -1;
+}
+
+.bgprincipal{
+  background: no-repeat black url('intro.png') 50% / 100% !important;
+  margin-top: -1.23em !important;
+}
+
+.fatorespqbg{
+  background: no-repeat black url('fatorespqbg.png') 50% / 100% !important;
+}
+
+.designbg{
+  background: no-repeat black url('designbg.png') 50% / 110% !important;
+  margin-top: 5em !important;
+}
+
+.producaobg{
+  background: no-repeat black url('producaobg.png') 50% / 110% !important;
+  margin-top: 5em !important;
+}
+
+.imgprincipal{
+    vertical-align: top !important;
+    width: 100% !important; /* max width */
+    opacity: 0 !important;  /* make it transparent */
+}
+
+.bgprincipal > div.entrada{
+    position: absolute !important;
+    top: 22% !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.bgprincipal > div.navprincipal{
+    position: absolute !important;
+    top: 2.6% !important;
+    width: 100% !important;
+    height: 100% !important;
+}
 
 .letrawhite {
-  color: white !important;
+  color: rgba(255,255,255,0.85) !important;
+}
+
+.letrawhite06 {
+  color: rgba(255,255,255,0.6) !important;
+}
+
+.letrapurple {
+  color: #f300f3 !important;
 }
 
 .letrablack {
@@ -219,15 +276,19 @@ html {
 }
 
 .letragrayclaro {
-  color: rgb(200,200,200);
+  color: rgb(180,180,180) !important;
 }
 
 .graybg {
   background-color: rgb(80, 80, 80) !important;
 }
 
-.bgsalmao2 {
-  background-color:	#f05924 !important;
+.bggrayclaro {
+  background-color: rgb(220, 220, 220) !important;
+}
+
+.bgblack {
+  background-color:	black !important;
 }
 
 .bgazulbebe2 {
@@ -242,6 +303,10 @@ html {
   width: 20%;
 }
 
+.paddingbottomprincipal {
+  padding-bottom: 39.6em !important;
+}
+
 .paddingbottomzero {
   padding-bottom: 0px !important;
 }
@@ -254,6 +319,10 @@ html {
   padding-top: 1em !important;
 }
 
+.paddingtop5p7 {
+  padding-top: 5.7em !important;
+}
+
 .marginzero {
   margin: 0em !important;
 }
@@ -262,16 +331,52 @@ html {
   padding-bottom: 2em !important;
 }
 
+.paddingbottom4 {
+  padding-bottom: 4em !important;
+}
+
 .paddingtop2 {
   padding-top: 2em !important;
+}
+
+.paddingtop4 {
+  padding-top: 4em !important;
 }
 
 .headers {
   font-size: 1.22em !important;
 }
 
+.marginbottom01n {
+  margin-bottom: -0.1em !important;
+}
+
+.marginbottom075 {
+  margin-bottom: 0.75em !important;
+}
+
+.marginbottom1 {
+  margin-bottom: 1em !important;
+}
+
 .marginbottom3 {
+  margin-bottom: 3em !important;
+}
+
+.marginbottom5 {
   margin-bottom: 5em !important;
+}
+
+.marginbottom6 {
+  margin-bottom: 6em !important;
+}
+
+.margintop-1 {
+  margin-top: -1em !important;
+}
+
+.margintop4 {
+  margin-top: 4em !important;
 }
 
 .bgwhite {
@@ -280,4 +385,76 @@ html {
 
 .nunito {
   font-family: "Nunito" !important;
+}
+
+.opacity75 {
+  opacity: 0.75 !important;
+}
+
+.topright {
+  position: absolute;
+  top: 130px;
+  right: 100px;
+}
+
+.topleft {
+  position: absolute;
+  top: 125px;
+  left: 100px;
+}
+
+.bottomright {
+  position: absolute;
+  top: 328px;
+  left: 800px;
+}
+
+.bottomleft {
+  position: absolute;
+  top: 350px;
+  left: 100px;
+}
+
+.topright2 {
+  position: absolute;
+  top: 125px;
+  right: 100px;
+}
+
+.topleft2 {
+  position: absolute;
+  top: 125px;
+  left: 100px;
+}
+
+.bottomright2 {
+  position: absolute;
+  top: 350px;
+  right: 100px;
+}
+
+.bottomleft2 {
+  position: absolute;
+  top: 328px;
+  right: 800px;
+}
+
+.fontdesignproducao {
+  font-size: 4em !important;
+}
+
+.fontpergunta {
+  font-size: 2em !important;
+}
+
+.fontmedio {
+  font-size: 3.5em !important;
+}
+
+.fontgrande {
+  font-size: 7em !important;
+}
+
+.font1p8 {
+  font-size: 1.8em !important;
 }

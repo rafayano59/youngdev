@@ -166,6 +166,14 @@
         	}, 500 );
         });
         
-        
+        $('.tiny.info.icon.link')
+          .popup({
+            position : 'right center',
+            target   : '#targetruby',
+            content  : 'O que Airbnb, Bloomberg, GitHub e Twitter têm em comum? São aplicações desenvolvidas em Ruby on Rails.'
+          })
+        ;
+
     });
+    
     
