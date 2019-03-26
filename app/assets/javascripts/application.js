@@ -174,6 +174,12 @@
           })
         ;
 
+        $('.bottomleft.image')
+          .dimmer({
+            on: 'hover'
+          })
+        ;
+
     });
     
     

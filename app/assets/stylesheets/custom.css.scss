@@ -24,7 +24,7 @@ body {
     overflow-x: hidden;
     min-width: 320px;
     font-family: 'Raleway', 'Open Sans','Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 62.5%;
     line-height: 1.4285em;
     color: rgba(0, 0, 0, 0.87);
     font-smoothing: antialiased;
@@ -35,10 +35,7 @@ html, body {
 body {
     margin: 0;
 }
-*, *:before, *:after {
-    -webkit-box-sizing: inherit;
-    box-sizing: inherit;
-}
+
 user agent stylesheet
 body {
     display: block;
@@ -52,14 +49,16 @@ html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
 }
+
+html {
+  box-sizing: border-box;
+}
+
 *, *:before, *:after {
     -webkit-box-sizing: inherit;
     box-sizing: inherit;
 }
-*, *:before, *:after {
-    -webkit-box-sizing: inherit;
-    box-sizing: inherit;
-}
+
 ::selection {
     background-color: #CCE2FF;
     color: rgba(0, 0, 0, 0.87);
@@ -70,7 +69,7 @@ html {
     }
 
     .masthead.segment {
-      min-height: 800px;
+      min-height: 53.19vw !important;
       padding: 0em 0em;
     }
     .masthead .logo.item img {
@@ -138,7 +137,7 @@ html {
         display: block;
       }
       .masthead.segment {
-        min-height: 350px;
+        min-height: 53.19vw !important;
       }
       .masthead h1.ui.header {
         font-size: 2em;
@@ -150,6 +149,18 @@ html {
       }
     }
     
+  @media only screen and (max-width: 767px) {
+    .ui.container {
+      width: auto !important;
+      margin-left: 0em !important;
+      margin-right: 0em !important;
+    }
+  }
+  
+  .dimmer { 
+    background: no-repeat url('dimmerdesign.png') 50% / 100% !important;
+  }
+  
   .colorpurple {
     color: purple !important;
   }
@@ -197,8 +208,8 @@ html {
 }
 
 .bgprincipal{
-  background: no-repeat black url('intro.png') 50% / 100% !important;
-  margin-top: -1.23em !important;
+  background: no-repeat black url('intro.png') 50% / 104% !important;
+  margin-top: -2% !important;
 }
 
 .fatorespqbg{
@@ -223,7 +234,7 @@ html {
 
 .bgprincipal > div.entrada{
     position: absolute !important;
-    top: 22% !important;
+    top: 12% !important;
     width: 100% !important;
     height: 100% !important;
 }
@@ -250,12 +261,6 @@ html {
 .letrablack {
   color: black !important;
 }
-
-.letrah4 {
-  font-size: 1.22rem;
-}
-
-
 
 .flyleft, .flyright {
   padding-top: 3em !important;
@@ -351,8 +356,8 @@ html {
   margin-bottom: -0.1em !important;
 }
 
-.marginbottom075 {
-  margin-bottom: 0.75em !important;
+.marginbottom1p6 {
+  margin-bottom: 1.6vw !important;
 }
 
 .marginbottom1 {
@@ -375,8 +380,24 @@ html {
   margin-top: -1em !important;
 }
 
+.margintop0 {
+  margin-top: 0vw !important;
+}
+
+.margintop0p7 {
+  margin-top: 0.7vw !important;
+}
+
+.marginbottom1p6 {
+  margin-bottom: 1.6vw !important;
+}
+
 .margintop4 {
   margin-top: 4em !important;
+}
+
+.margin1e0 {
+  margin: 1vw 0vw !important;
 }
 
 .bgwhite {
@@ -393,68 +414,84 @@ html {
 
 .topright {
   position: absolute;
-  top: 130px;
-  right: 100px;
+  top: 13%;
+  right: 7.5%;
 }
 
 .topleft {
   position: absolute;
-  top: 125px;
-  left: 100px;
+  top: 15%;
+  left: 6.6%;
 }
 
 .bottomright {
   position: absolute;
-  top: 328px;
-  left: 800px;
+  top: 42%;
+  left: 54.6%;
 }
 
 .bottomleft {
-  position: absolute;
-  top: 350px;
-  left: 100px;
+  position: absolute !important;
+  top: 43.3% !important;
+  left: 6.6% !important;
 }
 
 .topright2 {
   position: absolute;
-  top: 125px;
-  right: 100px;
+  top: 15%;
+  right: 6.6%;
 }
 
 .topleft2 {
   position: absolute;
-  top: 125px;
-  left: 100px;
+  top: 13%;
+  left: 5.4%;
 }
 
 .bottomright2 {
-  position: absolute;
-  top: 350px;
-  right: 100px;
+  position: absolute !important;
+  top: 43.3% !important;
+  right: 6.6% !important;
 }
 
 .bottomleft2 {
-  position: absolute;
-  top: 328px;
-  right: 800px;
+  position: absolute !important;
+  top: 42% !important;
+  right: 54.6% !important;
+}
+
+.fonttitulodesc {
+  font-size: 1.5vw !important;
+}
+
+.fontdescricao {
+  font-size: 1vw !important;
+}
+
+.letrah4 {
+  font-size: 1.3vw !important;
+}
+
+.fontinicio {
+  font-size: 4.5vw !important;
 }
 
 .fontdesignproducao {
-  font-size: 4em !important;
+  font-size: 5vw !important;
 }
 
 .fontpergunta {
-  font-size: 2em !important;
+  font-size: 1.87vw !important;
 }
 
 .fontmedio {
-  font-size: 3.5em !important;
+  font-size: 3vw !important;
 }
 
 .fontgrande {
-  font-size: 7em !important;
+  font-size: 6.02vw !important;
 }
 
 .font1p8 {
-  font-size: 1.8em !important;
+  font-size: 2vw !important;
 }
