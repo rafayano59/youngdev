@@ -23,6 +23,7 @@
 
   $(document)
     .ready(function() {
+      
 
       // fix menu when passed
       $('.bottomjs')
@@ -62,24 +63,25 @@
         
       //entrada fade home
       
-      $('.entrada')
+      $('.entrada1, .entrada2, .entrada3')
         .transition({
           animation  : 'fade in',
-          duration   : '5s'
+          duration   : '5s',
+          interval   : '1000'
         });
         
         
       //fade right home
       
       $('.faderight')
-        .transition('hide')
         .visibility({
           once: true,
           onTopVisible: function() {
-            $('.faderight')
+            $('.topleft, .bottomright')
               .transition({
                 animation  : 'fade right in',
-                duration   : '2s'
+                duration   : '2s',
+                interval   : 1000
               })
             ;
           }
@@ -89,14 +91,14 @@
       //fade left home
       
       $('.fadeleft')
-        .transition('hide')
         .visibility({
           once: true,
           onTopVisible: function() {
-            $('.fadeleft')
+            $('.topright2, .bottomleft2')
               .transition({
                 animation  : 'fade left in',
-                duration   : '2s'
+                duration   : '2s',
+                interval   : 1000
               })
             ;
           }
@@ -136,7 +138,7 @@
             $('.tadahome')
               .transition({
                 animation  : 'fade in',
-                duration   : '1s'
+                duration   : '5s'
               })
             ;
           }
@@ -147,10 +149,11 @@
         .visibility({
           once: true,
           onTopVisible: function() {
-            $('.tada2home')
+            $('.tada1, .tada2, .tada3, .tada4')
               .transition({
                 animation  : 'fade in',
-                duration   : '1s'
+                duration   : '5s',
+                interval   : 1000
               })
             ;
           }
@@ -179,7 +182,26 @@
             on: 'hover'
           })
         ;
-
+        
+        $('.right')
+          .on('click', function() {
+            console.log('right');
+            $('.slide')
+              .siblings('.active:not(:last-of-type)') 
+              .removeClass('active')
+              .next()
+              .addClass('active');
+        });
+        
+        $('.left')
+          .on('click', function() {
+            $('.slide')
+              .siblings('.active:not(:first-of-type)')
+              .removeClass('active')
+              .prev()
+              .addClass('active');
+        });
+         
     });
     
     

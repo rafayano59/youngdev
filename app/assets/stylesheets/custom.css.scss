@@ -11,6 +11,7 @@ body.pushable {
 
 body.pushable> .pusher {
     background: black !important;
+    min-height: 0% !important;
 }
 .pushable {
     height: 100%;
@@ -36,14 +37,6 @@ body {
     margin: 0;
 }
 
-user agent stylesheet
-body {
-    display: block;
-    margin: 8px;
-}
-html {
-    font-size: 14px;
-}
 html {
     line-height: 1.15;
     -ms-text-size-adjust: 100%;
@@ -148,14 +141,6 @@ html {
         font-size: 1.5em;
       }
     }
-    
-  @media only screen and (max-width: 767px) {
-    .ui.container {
-      width: auto !important;
-      margin-left: 0em !important;
-      margin-right: 0em !important;
-    }
-  }
   
   .dimmer { 
     background: no-repeat url('dimmerdesign.png') 50% / 100% !important;
@@ -212,18 +197,26 @@ html {
   margin-top: -2% !important;
 }
 
-.fatorespqbg{
-  background: no-repeat black url('fatorespqbg.png') 50% / 100% !important;
+.fortalecimentobg{
+  background: no-repeat black url('fortalecimento.png') 50% / 95% !important;
+}
+
+.visibilidadebg{
+  background: no-repeat black url('visibilidade.png') 50% / 95% !important;
+}
+
+.marketingbg{
+  background: no-repeat black url('marketing.png') 50% / 95% !important;
 }
 
 .designbg{
   background: no-repeat black url('designbg.png') 50% / 110% !important;
-  margin-top: 5em !important;
+  margin-top: 4.4vw !important;
 }
 
 .producaobg{
   background: no-repeat black url('producaobg.png') 50% / 110% !important;
-  margin-top: 5em !important;
+  margin-top: 4.4vw !important;
 }
 
 .imgprincipal{
@@ -234,7 +227,7 @@ html {
 
 .bgprincipal > div.entrada{
     position: absolute !important;
-    top: 12% !important;
+    top: 18.5% !important;
     width: 100% !important;
     height: 100% !important;
 }
@@ -270,10 +263,6 @@ html {
 .bgsalmao {
   background-color:	#f05924 !important;
   width: 100% !important;
-}
-
-.faderight {
-  padding-left: 3em !important;
 }
 
 .letragray {
@@ -325,7 +314,7 @@ html {
 }
 
 .paddingtop5p7 {
-  padding-top: 5.7em !important;
+  padding-top: 4.9vw !important;
 }
 
 .marginzero {
@@ -333,27 +322,27 @@ html {
 }
 
 .paddingbottom2 {
-  padding-bottom: 2em !important;
+  padding-bottom: 1.7vw !important;
 }
 
-.paddingbottom4 {
-  padding-bottom: 4em !important;
+.paddingbottom3 {
+  padding-bottom: 2.5vw !important;
 }
 
 .paddingtop2 {
-  padding-top: 2em !important;
+  padding-top: 1.7vw !important;
+}
+
+.paddingtop3 {
+  padding-top: 2.5vw !important;
 }
 
 .paddingtop4 {
-  padding-top: 4em !important;
-}
-
-.headers {
-  font-size: 1.22em !important;
+  padding-top: 3vw !important;
 }
 
 .marginbottom01n {
-  margin-bottom: -0.1em !important;
+  margin-bottom: -0.1vw !important;
 }
 
 .marginbottom1p6 {
@@ -361,31 +350,39 @@ html {
 }
 
 .marginbottom1 {
-  margin-bottom: 1em !important;
+  margin-bottom: 0.8vw !important;
 }
 
 .marginbottom3 {
-  margin-bottom: 3em !important;
+  margin-bottom: 2.5vw !important;
 }
 
 .marginbottom5 {
-  margin-bottom: 5em !important;
+  margin-bottom: 4.5vw !important;
 }
 
 .marginbottom6 {
-  margin-bottom: 6em !important;
+  margin-bottom: 5vw !important;
 }
 
 .margintop-1 {
-  margin-top: -1em !important;
+  margin-top: -0.8vw !important;
 }
 
 .margintop0 {
   margin-top: 0vw !important;
 }
 
+.margintop0p45 {
+  margin-top: 0.45vw !important;
+}
+
 .margintop0p7 {
   margin-top: 0.7vw !important;
+}
+
+.marginbottom1 {
+  margin-bottom: 1vw !important;
 }
 
 .marginbottom1p6 {
@@ -495,3 +492,118 @@ html {
 .font1p8 {
   font-size: 2vw !important;
 }
+
+.leftalign {
+  text-align: left !important;
+}
+
+
+// slides css
+.slides {
+  // must have height set
+  margin-right: 0vw !important;
+  height: 22.5vw !important;
+  width: 45.5vw !important;
+  overflow: hidden;
+  .angle {
+    color: lightblue;
+    cursor: pointer;
+    position: relative;
+    top: calc(50% - 1.5vw);
+    transform: scale(1);
+    transition: all .2s ease-in-out;
+    z-index: 10;
+    &:hover {
+      transform: scale(1.7);
+    }
+    &.right {
+      float: right;
+      margin-right: 0vw;
+    }
+    &.left {
+      float: left;
+      margin-left: 0vw;
+    }
+  }
+  .slide {
+    height: 100%;
+    width: 45.6vw;
+    padding: 1.8vw 2.5vw;
+    transition: all .2s ease-in-out;
+    &:not(.active) {
+      display: none;
+    }
+    &.inverted {
+      color: white;
+    }
+    &.shadow {
+      text-shadow: 0.8vw 0.8vw 1.7vw black;
+    }
+    &.image {
+      background: no-repeat url('producaoimg2.png') 50% / 100% !important;
+    }
+  }
+}
+
+// add .faded to .slide for fade-in
+.faded {
+  animation: fade .5s;
+}
+
+.blurred {
+  animation: blur .4s;
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opcity: 1; }
+}
+
+@keyframes blur {
+  from { filter: blur(4vw); }
+  to { filter: blur(0); }
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+@media only screen and (max-width: 767px) {
+    .ui.container {
+      width: auto !important;
+      margin-left: 0em !important;
+      margin-right: 0em !important;
+    }
+    
+    .fonttitulodesc {
+      font-size: 3vw !important;
+    }
+    
+    .fontdescricao {
+      font-size: 2vw !important;
+    }
+
+    .letrah4 {
+      font-size: 2.6vw !important;
+    }
+    
+    .fortalecimentobg{
+      background: no-repeat black url('fortalecimento.png') 50% / 60% !important;
+    }
+    
+    .visibilidadebg{
+      background: no-repeat black url('visibilidade.png') 50% / 60% !important;
+    }
+    
+    .marketingbg{
+      background: no-repeat black url('marketing.png') 50% / 60% !important;
+    }
+    
+    .fontsize055 {
+      font-size: 0.55rem !important;
+    }
+    
+    .centeralign {
+      text-align: center !important;
+    }
+  }

@@ -22,15 +22,12 @@
       
       <h1 class="ui header">
         <strong>
-        <span class="colorwhite fontinicio">Young Developments</span>
+        <span class="colorwhite fontinicio hidden entrada1">Young Developments</span>
         </strong>
       </h1>
-      <p class="margintop0 marginbottom1p6 fontpergunta colorwhite">Aplicações Web personalizadas a você.</p>
-      <a class="ui animated fade big inverted purple button" tabindex="0" href="#pqcriarantes">
-        <div class="visible content">Venha nos conhecer</div>
-        <div class="hidden content">
-          <i class="down arrow icon"></i>
-        </div>
+      <p class="margintop0p45 marginbottom1p6 fontpergunta colorwhite hidden entrada2">Aplicações Web personalizadas a você.</p>
+      <a class="ui big inverted purple button hidden fontsize055 entrada3" tabindex="0" href="#pqcriarantes">
+        Venha nos conhecer
       </a>
     </div>
 
@@ -47,20 +44,26 @@
         E qual a melhor maneira se não construindo seu site próprio?</p>
       </div>
 
-      <div class="ui segment fatorespqbg">
-        <div class="center aligned ui three column divided grid paddingtop4 paddingbottom4">
-          <div class="column">
-            <h3 class="letrawhite fonttitulodesc">Fortalecimento da marca</h3>
+      <div class="ui segment bgblack">
+        <div class="center aligned ui three column stackable grid">
+
+          <div class="column fortalecimentobg paddingtop3 paddingbottom3">
+            <h3 class="letrawhite fonttitulodesc marginbottom1">Fortalecimento da Marca</h3>
             <p class="fontdescricao letrawhite"><span class="opacity75">Um site funcional, otimizado e útil ao usuário,<br> fortalecerá ainda mais a sua marca, pois transmitirá<br></span><span class="letrapurple letrah4">ideia de confiabilidade aos clientes</span></p>
           </div>
-          <div class="column">
-            <h3 class="letrawhite fonttitulodesc">Visibilidade e Posicionamento</h3>
+
+
+          <div class="column visibilidadebg paddingtop3 paddingbottom3">
+            <h3 class="letrawhite fonttitulodesc marginbottom1">Visibilidade e Posicionamento</h3>
             <p class="fontdescricao letrawhite"><span class="opacity75">Criar um site é essencial para que a sua empresa ganhe<br> mais visibilidade na internet e, por consequência,<br></span><span class="letrapurple letrah4">atrair um número maior de clientes</span></p>
           </div>
-          <div class="column">
-            <h3 class="letrawhite fonttitulodesc">Marketing de Conteúdo</h3>
-            <p class="fontdescricao letrawhite"><span class="opacity75">O site da sua empresa envolverá seus potenciais compradores<br> com uma série de temas e informações relevantes para<br></span><span class="letrapurple letrah4">ampliar suas oportunidades de negócios</span></p>
+
+
+          <div class="column marketingbg paddingtop3 paddingbottom3">
+            <h3 class="letrawhite fonttitulodesc marginbottom1">Marketing de Conteúdo</h3>
+            <p class="fontdescricao letrawhite"><span class="opacity75">O seu site envolverá seus potenciais compradores<br> com uma série de temas e informações relevantes para<br></span><span class="letrapurple letrah4">ampliar suas oportunidades de negócios</span></p>
           </div>
+
         </div>
       </div>
     </div>
@@ -68,9 +71,9 @@
   </div>
   
   <div class="ui vertical masthead segment designbg">
-    <div class="ui center aligned container">
+    <div class="ui center aligned container faderight">
       <div class="topright letrawhite fontdesignproducao">DESIGN</div>
-      <div class="ui topleft letrawhite left aligned container">
+      <div class="ui topleft letrawhite left aligned container hidden">
         <p class="fontpergunta marginbottom075">- Como seu negócio merece ser apresentado?</p>
         <p class="fontmedio letrawhite06">Unimos a identidade da sua marca<br>à funcionalidade que seu público deseja</p>
       </div>
@@ -83,7 +86,7 @@
         <%= image_tag("designimg.png", :alt => "design desenvolvimento de sites image", :class => "ui image", :style=> "width:100%") %>
       </div>
       
-      <div class="ui bottomright letrawhite left aligned container">
+      <div class="ui bottomright letrawhite left aligned container hidden">
         <p class="fontgrande marginbottom01n">útil e atraente</p>
         <p class="fontmedio margintop0p7 marginbottom1p6 letrawhite06">são os pilares para uma<br>experiência agradável</p>
         <p class="fontpergunta">- quer mais ou é o suficiente?</p>
@@ -97,20 +100,59 @@
   
     
       <div class="ui center aligned segment bgblack letrawhite paddingtop5p7">
-        <p class="font1p8">Não podemos nos importar com o visual se não demostrarmos<br>uma performance de excelência.</p>
+        <p class="font1p8 tadahome hidden">Não podemos nos importar com o visual se não demostrarmos<br>uma performance de excelência.</p>
       </div>
       
     </div>
   
   <div class="ui vertical masthead segment producaobg">
-    <div class="ui center aligned container">
+    <div class="ui center aligned container fadeleft">
       <div class="topleft2 letrawhite fontdesignproducao">PRODUÇÃO</div>
-      <div class="ui topright2 letrawhite right aligned container">
+      <div class="ui topright2 letrawhite right aligned container hidden">
         <p class="fontpergunta marginbottom075">- O que esperar do nosso processo de desenvolvimento?</p>
         <p class="fontmedio letrawhite06">a linguagem que utilizamos nos permite<br>criar com rapidez sem perda no desempenho</p>
       </div>
-      <%= image_tag("producaoimg.png", :alt => "produção desenvolvimento de sites image", :class => "bottomright2", :style=> "width:45.6%") %>
-      <div class="ui bottomleft2 letrawhite right aligned container">
+      <div class="ui container bottomright2" style="width:45.6%">
+        <div class="ui text container slides">
+          <i class="big left angle icon font1p8"></i>
+          <i class="big right angle icon font1p8"></i>
+          <div class="slide active inverted shadow blurred image slide">
+            <p class="fontmedio leftalign marginbottom1">Ruby on Rails</p>
+            <p class="fontpergunta leftalign letrawhite06">
+              O RoR possui todas as ferramentas e soluções necessárias ao seu projeto.
+              O que nos capacita na entrega de um produto feito na medida certa para o seu negócio.
+            </p>
+          </div>
+          <div class="slide inverted shadow blurred image slide">
+            <p class="fontmedio leftalign marginbottom1">Ferramentas</p>
+            <p class="fontpergunta leftalign letrawhite06">
+              O RoR possui ferramentas e padrões de desenvolvimento que aumentam consideravelmente
+              os processos de criação e produção do seu site.
+            </p>
+          </div>
+          <div class="slide inverted shadow blurred image slide">
+            <p class="fontmedio leftalign marginbottom1">Bibliotecas</p>
+            <p class="fontpergunta leftalign letrawhite06">
+              Com as melhores "gems" disponíveis para o RoR, funcionalidades complexas tornam-se simples e fáceis de serem desenvolvidas.
+            </p>
+          </div>
+          <div class="slide active inverted shadow blurred image slide">
+            <p class="fontmedio leftalign marginbottom1">Automatização dos Testes</p>
+            <p class="fontpergunta leftalign letrawhite06">
+              O RoR tem testes automatizados integrados que ajudam a fornecer um back-end estável e de alta qualidade.
+            </p>
+          </div>
+          <div class="slide active inverted shadow blurred image slide">
+            <p class="fontmedio leftalign marginbottom1">Econômico</p>
+            <p class="fontpergunta leftalign letrawhite06">
+              Sempre tentamos entender como nosso código se encaixa na visão do produto e
+              acreditamos que um bom código precisa fornecer o maior valor com o menor custo.
+            </p>
+          </div>
+        </div>
+      </div>
+      <%#= image_tag("producaoimg2.png", :alt => "produção desenvolvimento de sites image", :class => "bottomright2", :style=> "width:45.6%") %>
+      <div class="ui bottomleft2 letrawhite right aligned container hidden">
         <p class="fontgrande marginbottom01n">ágil e eficiente</p>
         <p class="fontmedio marginbottom075 letrawhite06">tudo isso devido ao<br>nosso diferencial</p>
         <p id="targetruby" class="fontpergunta">- Ruby on Rails <i class="tiny circular info icon link" data-variation="large inverted"></i></p>
@@ -123,17 +165,14 @@
   <div class="ui segments">
   
     
-      <div class="ui center aligned segment bgblack letrawhite paddingbottom4 paddingtop4">
-        <h1 class="fontmedio">Obtenha seu site<br>profissional agora mesmo.</h1>
-        <p class="font1p8">Fazemos parcerias com pessoas que partilham de nossos valores,<br>
+      <div class="ui center aligned segment bgblack letrawhite paddingbottom4 paddingtop4 tada2home">
+        <h1 class="fontmedio tada1 hidden">Obtenha seu site<br>profissional agora mesmo</h1>
+        <p class="font1p8 tada2 hidden">Fazemos parcerias com pessoas que partilham de nossos valores,<br>
           ajudando-as a se adaptar, crescer e seguir em frente.</p>
-        <p class="fontpergunta letrawhite06">Diga para nós, quais são seus valores?</p>
-        <a class="ui animated fade huge inverted purple button" tabindex="0" href="#pqcriarantes">
-        <div class="visible content">Contate-nos</div>
-        <div class="hidden content">
-          <i class="right arrow icon"></i>
-        </div>
-      </a>
+        <p class="fontpergunta letrawhite06 tada3 hidden">Diga para nós, quais são seus valores?</p>
+        <a class="ui huge inverted purple basic button tada4 hidden fontsize055" tabindex="0" href="#pqcriarantes">
+          Contate-nos
+        </a>
       </div>
       
   </div>
