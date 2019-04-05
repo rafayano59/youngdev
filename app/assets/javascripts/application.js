@@ -18,9 +18,6 @@
 //= require jquery.mask
 //= require_tree .
 
-    window.onbeforeunload = function () {
-        window.scrollTo(0,0);
-};
 
   $(document)
     .ready(function() {
@@ -160,15 +157,6 @@
           }
         }); 
         
-        $("a[href^='#']").click(function(e) {
-        	e.preventDefault();
-        	
-        	var position = $($(this).attr("href")).offset().top;
-        
-        	$("body, html").animate({
-        		scrollTop: position
-        	}, 500 );
-        });
         
         $('.tiny.info.icon.link')
           .popup({

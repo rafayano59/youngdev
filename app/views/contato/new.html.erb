@@ -40,6 +40,18 @@
 
   </div>
   
+  <% if !!flash[:alert] %>
+
+    <p class="fontmedio letrawhite"><%= flash[:alert] %></p> <br>
+
+  <% end %>
+  
+  <% if !!flash[:notice] %>
+  <div class="ui segment bgblack center aligned">
+    <p class="fontmedio letrawhite"><%= flash[:notice] %></p> 
+  </div>
+  <% end %>
+  
   <div id="pqcriarantes" class="marginbottom3"></div>
   
   <div class="ui segment bgblack">
@@ -49,18 +61,17 @@
             <%= form_for @contato, url: create_contato_url,:html => {:class => 'ui big inverted form'} do |f| %>
             <%#= form_tag contato_url, :class=>"ui big inverted form" do %>
             <!--<div class="ui big inverted form new_contato" id="new_contato" action="/contato" method="POST">-->
-              <%= notice %>
               <%= @contato.errors.full_messages.join(', ') %>
               <!--<input type="hidden" name="authenticity_token" value="<%#= form_authenticity_token %>">-->
               <div class="field">
                 <%= f.label :name, 'Contato' %>
-                <%= f.text_field :name, placeholder: 'Nome e Empresa', :required => true, :maxlength => "50" %>
+                <%= f.text_field :name, placeholder: 'Nome* e Empresa', :required => true, :maxlength => "50" %>
                 <!--<input id="contato_name" type="text" name="contato[name]" placeholder="Nome e Empresa" maxlength="50" required>-->
               </div>
               <div class="two fields">
                 <div class="field">
                   <!--<input id="contato_email" type="email" name="contato[email]" placeholder="Email" maxlength="50" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">-->
-                  <%= f.text_field :email, placeholder: 'Email', :maxlength => "50", :pattern => "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" %>
+                  <%= f.text_field :email, placeholder: 'Email*', :maxlength => "50", :required => true, :pattern => "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" %>
                 </div>
                 <div class="field">
                   <!--<input id="contato_phone" type="tel" class="phone" name="contato[phone]" placeholder="Telefone ou Celular">-->
@@ -69,8 +80,8 @@
               </div>
               
               <div class="field">
+                <%= f.label :servico, 'Tipo de serviço*' %>
                 <%= f.select :servico, options_for_select([
-                  ['Tipo de Serviço'], 
                   ['Site Institucional', {'data-bg' => "institucionalbg", 'data-h3' => "Site Institucional", 'data-p' => "É composto por páginas de informações como serviços, produtos, preços e formas de contato. 
                   Esse tipo de site é basicamente um cartão de visitas para dar presença online a seu negócio."}], 
                   ['Loja Virtual', {'data-bg'=>"lojavirtualbg", 'data-h3'=>"Loja Virtual", 'data-p'=>"Com uma loja virtual é possível vender e divulgar para todo o Brasil e até para o exterior. 
@@ -85,7 +96,7 @@
                   Ter um blog é o primeiro passo para publicar artigos, dicas, notícias e criar sua própria audiência."}],
                   ['Outra aplicação', {'data-bg'=>"institucionalbg", 'data-h3'=>"Outra aplicação", 'data-p'=>"A aplicação que você deseja produzir não se enquadra em nenhum dos modelos citados?
                   Descreva em sua mensagem o que você deseja e retornaremos o quanto antes."}],
-                  ], 'Tipo de Serviço'), {}, { :id => "pic-changer", :class => "ui fluid dropdown" } %>
+                  ]), {}, { :id => "pic-changer", :class => "ui fluid dropdown", :required => true } %>
                 <!--<select id="pic-changer" class="ui fluid dropdown" name = "contato[servico]">
                   <option value="none">Serviço a ser solicitado</option>
                   <option value="institucional" data-bg="institucionalbg" data-h3="Site Institucional"

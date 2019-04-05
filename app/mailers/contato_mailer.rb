@@ -7,7 +7,12 @@ class ContatoMailer < ApplicationMailer
   #
   def contact_me(contato)
     @greeting = "Hi"
+    @name = contato.name
     @body = contato.message
+    @email = contato.email
+    @phone = contato.phone
+    @servico = contato.servico
+    
     
     mail to: "rafael.yano59@gmail.com", from: contato.email
   end

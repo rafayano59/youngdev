@@ -9,9 +9,11 @@ class ContatoController < ApplicationController
 
     if @contato.valid?
       ContatoMailer.contact_me(@contato).deliver_now
-      redirect_to new_contato_url, notice: "Message received, thanks!"
+      flash[:notice] = "Mensagem enviada! Retornaremos assim que possível!"
+      redirect_to new_contato_url
     else
-      render :new
+      flash[:alert] = "There was an error sending your message. Please try again."
+      redirect_to new_contato_url
     end
   end
 
