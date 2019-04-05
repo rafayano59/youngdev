@@ -18,9 +18,7 @@
 //= require jquery.mask
 //= require_tree .
 
-
-  $(document)
-    .ready(function() {
+  $(document).on('turbolinks:load', function() {
       
 
       // fix menu when passed
@@ -47,16 +45,6 @@
         .sidebar('attach events', '.toc.item')
       ;
       
-      // gradually change color home
-      $('.telapreta')
-        .visibility({
-           once       : false,
-           continuous : true,
-          onPassing  : function(calculations) {
-            var newColor = 'rgba(0, 0, 0, ' + ( 1 - calculations.percentagePassed ) +')';
-            $(this).css('background-color', newColor);
-          }
-        });
         
         
       //entrada fade home
@@ -103,26 +91,6 @@
         });  
        
       
-      //fly left home
-      
-      $('.center.aligned.row')
-        .visibility({
-          once: true,
-          onTopVisible: function() {
-            $('.center.aligned.row .flyleft')
-              .transition({
-                animation  : 'bounce',
-                duration   : '1s'
-              })
-            ;
-            $('.center.aligned.row .flyright')
-              .transition({
-                animation  : 'bounce',
-                duration   : '1s'
-              })
-            ;
-          }
-        }); 
 
       
         
