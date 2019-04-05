@@ -15,6 +15,7 @@
 //= require activestorage
 //= require turbolinks
 //= require semantic-ui
+//= require jquery.mask
 //= require_tree .
 
     window.onbeforeunload = function () {
@@ -63,7 +64,7 @@
         
       //entrada fade home
       
-      $('.entrada1, .entrada2, .entrada3')
+      $('.entrada1, .entrada2, .entrada3, .entrada4, .entrada5')
         .transition({
           animation  : 'fade in',
           duration   : '5s',
@@ -173,7 +174,7 @@
           .popup({
             position : 'right center',
             target   : '#targetruby',
-            content  : 'O que Airbnb, Bloomberg, GitHub e Twitter têm em comum? São aplicações desenvolvidas em Ruby on Rails.'
+            content  : 'O que Airbnb, Bloomberg, Shopify e Twitter têm em comum? São aplicações desenvolvidas em Ruby on Rails.'
           })
         ;
 
@@ -201,6 +202,28 @@
               .prev()
               .addClass('active');
         });
+        
+        
+        $('#pic-changer').change(function(){ //if the select value gets changed
+           var bgSource = $(this).find(':selected').data('bg');
+           var h3Source = $(this).find(':selected').data('h3'); //get the data from data-h3 attribute
+           var pSource = $(this).find(':selected').data('p');
+           if(h3Source){ //if it has data
+              $('#image-location').html('<div class="ui segment '+bgSource+'"><h3 class="letrawhite fontmedio marginbottom1">'+h3Source+'</h3><p class="font1p8 letrawhite06">'+pSource+'</p></div>'); // insert image in div image-location
+           } else {
+              $('#image-location').html('<div id="image-location" class="ui center aligned segment institucionalbg"><h3 class="letrawhite fontmedio marginbottom1">Nossos valores</h3><p class="font1p8 letrawhite06">Acreditamos que um bom serviço fornece o maior valor com o menor custo.<br>Desenvolvemos sites com preços a partir de <span class="font3p5 opacity75 tadahome letrapurple">R$475</span><br></p></div>'); //remove content from div image-location, thus removing the image
+           }
+        })
+        
+        var maskBehavior = function (val) {
+          return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
+        },
+        options = {onKeyPress: function(val, e, field, options) {
+                field.mask(maskBehavior.apply({}, arguments), options);
+            }
+        };
+        
+        $('#contato_phone').mask(maskBehavior, options);
          
     });
     

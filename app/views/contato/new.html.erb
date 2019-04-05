@@ -1,0 +1,144 @@
+<!-- Page Contents -->
+<div class="pusher">
+  <div class="ui vertical masthead center aligned segment paddingtopzero bgprincipal">
+    <div class="ui container navprincipal">
+      <div class="ui large secondary inverted pointing menu">
+        <a class="toc item">
+          <i class="sidebar icon"></i>
+        </a>
+        <div class="item">
+          <%= image_tag("logo.png", :alt => "YoungDev logo", :class => "ui large bordered rounded image", :style=> "width:180px") %>
+        </div>
+        <div class="right item">
+          <a class="item">Início</a>
+          <a class="active item">Contate-nos</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="ui center aligned container entrada bottomjs">
+      
+      <h1 class="ui header">
+        <strong>
+        <span class="colorwhite fontinicio hidden entrada1">Fale conosco</span>
+        </strong>
+      </h1>
+      <p class="margintop0p45 marginbottom05n fontpergunta letrawhite06 hidden entrada2">
+        Deseja discutir sobre nosso produto ou uma parceria?
+      </p>
+      <p class="margintop0p45 marginbottom1p6 fontpergunta letrawhite06 hidden entrada3">
+        Estamos a sua disposição
+      </p>
+      <a class="ui big inverted purple button hidden fontsize055 entrada4" tabindex="0" href="#pqcriarantes">
+        Formulário
+      </a>
+      <a class="ui big inverted purple button hidden fontsize055 entrada5" tabindex="0" href="mailto:youngdev@email.com">
+        E-mail
+      </a>
+    </div>
+
+  </div>
+  
+  <div id="pqcriarantes" class="marginbottom3"></div>
+  
+  <div class="ui segment bgblack">
+        <div class="center aligned ui two column stackable grid">
+
+          <div class="column visibilidadebg paddingtop3 paddingbottom3">
+            <%= form_for @contato, url: create_contato_url,:html => {:class => 'ui big inverted form'} do |f| %>
+            <%#= form_tag contato_url, :class=>"ui big inverted form" do %>
+            <!--<div class="ui big inverted form new_contato" id="new_contato" action="/contato" method="POST">-->
+              <%= notice %>
+              <%= @contato.errors.full_messages.join(', ') %>
+              <!--<input type="hidden" name="authenticity_token" value="<%#= form_authenticity_token %>">-->
+              <div class="field">
+                <%= f.label :name, 'Contato' %>
+                <%= f.text_field :name, placeholder: 'Nome e Empresa', :required => true, :maxlength => "50" %>
+                <!--<input id="contato_name" type="text" name="contato[name]" placeholder="Nome e Empresa" maxlength="50" required>-->
+              </div>
+              <div class="two fields">
+                <div class="field">
+                  <!--<input id="contato_email" type="email" name="contato[email]" placeholder="Email" maxlength="50" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">-->
+                  <%= f.text_field :email, placeholder: 'Email', :maxlength => "50", :pattern => "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" %>
+                </div>
+                <div class="field">
+                  <!--<input id="contato_phone" type="tel" class="phone" name="contato[phone]" placeholder="Telefone ou Celular">-->
+                  <%= f.telephone_field :phone, placeholder: 'Telefone ou Celular' %>
+                </div>
+              </div>
+              
+              <div class="field">
+                <%= f.select :servico, options_for_select([
+                  ['Tipo de Serviço'], 
+                  ['Site Institucional', {'data-bg' => "institucionalbg", 'data-h3' => "Site Institucional", 'data-p' => "É composto por páginas de informações como serviços, produtos, preços e formas de contato. 
+                  Esse tipo de site é basicamente um cartão de visitas para dar presença online a seu negócio."}], 
+                  ['Loja Virtual', {'data-bg'=>"lojavirtualbg", 'data-h3'=>"Loja Virtual", 'data-p'=>"Com uma loja virtual é possível vender e divulgar para todo o Brasil e até para o exterior. 
+                  Receba pagamentos online, controle os estoques, gerencie seus pedidos e muito mais."}],
+                  ['E-learning', {'data-bg'=>"elearningbg", 'data-h3'=>"E-learning", 'data-p'=>"Seu produto é digital? Deseja vender cursos ou tutoriais por meio de vídeos e imagens?
+                   Então uma plataforma de e-learning é o produto certo para o seu negócio."}],
+                  ['Hot Site', {'data-bg'=>"hotsitebg", 'data-h3'=>"Hot Site", 'data-p'=>"É uma ferramenta do marketing digital que pode ser utilizada para diversas funções,
+                  como lançar um produto específico, promover uma festa, captar e-mails, entre outros."}],
+                  ['Portal', {'data-bg'=>"portalbg", 'data-h3'=>"Portal", 'data-p'=>"Site projetado para aglomerar e distribuir conteúdos de várias fontes diferentes de maneira uniforme, 
+                  sendo um ponto de acesso para outros sites da empresa gestora do portal."}],
+                  ['Blog', {'data-bg'=>"blogbg", 'data-h3'=>"Blog", 'data-p'=>"Seu negócio é voltado a produzir conteúdo para um público específico? 
+                  Ter um blog é o primeiro passo para publicar artigos, dicas, notícias e criar sua própria audiência."}],
+                  ['Outra aplicação', {'data-bg'=>"institucionalbg", 'data-h3'=>"Outra aplicação", 'data-p'=>"A aplicação que você deseja produzir não se enquadra em nenhum dos modelos citados?
+                  Descreva em sua mensagem o que você deseja e retornaremos o quanto antes."}],
+                  ], 'Tipo de Serviço'), {}, { :id => "pic-changer", :class => "ui fluid dropdown" } %>
+                <!--<select id="pic-changer" class="ui fluid dropdown" name = "contato[servico]">
+                  <option value="none">Serviço a ser solicitado</option>
+                  <option value="institucional" data-bg="institucionalbg" data-h3="Site Institucional"
+                  data-p="É composto por páginas de informações como serviços, produtos, preços e formas de contato. 
+                  Esse tipo de site é basicamente um cartão de visitas para dar presença online a seu negócio.">Site institucional</option>
+                  <option value="loja" data-bg="lojavirtualbg" data-h3="Loja Virtual"
+                  data-p="Com uma loja virtual é possível vender e divulgar para todo o Brasil e até para o exterior. 
+                  Receba pagamentos online, controle os estoques, gerencie seus pedidos e muito mais.">Loja Virtual</option>
+                  <option value="elearning" data-bg="elearningbg" data-h3="E-learning"
+                  data-p="Seu produto é digital? Deseja vender cursos ou tutoriais por meio de vídeos e imagens?
+                   Então uma plataforma de e-learning é o produto certo para o seu negócio.">E-learning</option>
+                  <option value="hotsite" data-bg="hotsitebg" data-h3="Hot Site"
+                  data-p="É uma ferramenta do marketing digital que pode ser utilizada para diversas funções,
+                  como lançar um produto específico, promover uma festa, captar e-mails, entre outros.">Hot Site</option>
+                  <option value="portal" data-bg="portalbg" data-h3="Portal"
+                  data-p="Site projetado para aglomerar e distribuir conteúdos de várias fontes diferentes de maneira uniforme, 
+                  sendo um ponto de acesso para outros sites da empresa gestora do portal.">Portal</option>
+                  <option value="blog" data-bg="blogbg" data-h3="Blog"
+                  data-p="Seu negócio é voltado a produzir conteúdo para um público específico? 
+                  Ter um blog é o primeiro passo para publicar artigos, dicas, notícias e criar sua própria audiência.">Blog</option>
+                  <option value="outros" data-bg="institucionalbg" data-h3="Outros"
+                  data-p="A aplicação que você deseja produzir não se enquadra em nenhum dos modelos citados?
+                  Descreva em sua mensagem o que você deseja e retornaremos o quanto antes.">Outro tipo de aplicação</option>
+                </select>-->
+              </div>
+              
+              <div class="field">
+                <%= f.label :message, 'Mensagem' %>
+                <%= f.text_area :message, placeholder: 'Descreva seu produto e os recursos adicionais que deseja para sua aplicação.', :required => true, :maxlength => "255", :rows => "2" %>
+                <!--<label>Mensagem</label>
+                <textarea rows="2" id="contato_message" name="contato[message]" placeholder="Descreva seu produto e os recursos adicionais que deseja para sua aplicação." maxlength="300"></textarea>-->
+              </div>
+              
+              
+              <%= f.submit 'Solicite seu orçamento', :class => "ui purple button", :tabindex => "0" %>
+              <!--<input name="commit" class="ui purple button" tabindex="0" type="submit" value="Solicite seu Orçamento">
+            </div>-->
+            <% end %> 
+          </div>
+          
+          <div class="left aligned column paddingtop3 paddingbottom3">
+              <div id="image-location" class="ui center aligned segment institucionalbg">
+                <h3 class="letrawhite fontmedio marginbottom1">Nossos valores</h3>
+                <p class="font1p8 letrawhite06">
+                  Acreditamos que um bom serviço fornece o maior valor com o menor custo.<br>Desenvolvemos sites com preços a partir de <span class="font3p5 opacity75 tadahome hidden letrapurple">R$475</span><br>
+                </p>
+              </div>
+            
+          </div>
+          
+        </div>
+  </div>
+
+  
+
+</div>

@@ -198,15 +198,15 @@ html {
 }
 
 .fortalecimentobg{
-  background: no-repeat black url('fortalecimento.png') 50% / 95% !important;
+  background: no-repeat black url('fortalecimento2.png') 50% / 95% !important;
 }
 
 .visibilidadebg{
-  background: no-repeat black url('visibilidade.png') 50% / 95% !important;
+  background: no-repeat black url('visibilidade2.png') 50% / 95% !important;
 }
 
 .marketingbg{
-  background: no-repeat black url('marketing.png') 50% / 95% !important;
+  background: no-repeat black url('marketing2.png') 50% / 95% !important;
 }
 
 .designbg{
@@ -217,6 +217,36 @@ html {
 .producaobg{
   background: no-repeat black url('producaobg.png') 50% / 110% !important;
   margin-top: 4.4vw !important;
+}
+
+.blogbg{
+  background: no-repeat black url('blog.png') 50% / 70% !important;
+  margin-top: 0px !important;
+}
+
+.elearningbg{
+  background: no-repeat black url('elearning.png') 50% / 70% !important;
+  margin-top: 0px !important;
+}
+
+.hotsitebg{
+  background: no-repeat black url('hotsite.png') 50% / 70% !important;
+  margin-top: 0px !important;
+}
+
+.institucionalbg{
+  background: no-repeat black url('institucional.png') 50% / 70% !important;
+  margin-top: 0px !important;
+}
+
+.lojavirtualbg{
+  background: no-repeat black url('lojavirtual.png') 50% / 70% !important;
+  margin-top: 0px !important;
+}
+
+.portalbg{
+  background: no-repeat black url('portal.png') 50% / 70% !important;
+  margin-top: 0px !important;
 }
 
 .imgprincipal{
@@ -329,6 +359,9 @@ html {
   padding-bottom: 2.5vw !important;
 }
 
+.paddingbottom4 {
+  padding-bottom: 4vw !important;
+}
 .paddingtop2 {
   padding-top: 1.7vw !important;
 }
@@ -345,12 +378,16 @@ html {
   margin-bottom: -0.1vw !important;
 }
 
-.marginbottom1p6 {
-  margin-bottom: 1.6vw !important;
+.marginbottom05n {
+  margin-bottom: -0.5vw !important;
 }
 
 .marginbottom1 {
-  margin-bottom: 0.8vw !important;
+  margin-bottom: 1vw !important;
+}
+
+.marginbottom1p6 {
+  margin-bottom: 1.6vw !important;
 }
 
 .marginbottom3 {
@@ -379,14 +416,6 @@ html {
 
 .margintop0p7 {
   margin-top: 0.7vw !important;
-}
-
-.marginbottom1 {
-  margin-bottom: 1vw !important;
-}
-
-.marginbottom1p6 {
-  margin-bottom: 1.6vw !important;
 }
 
 .margintop4 {
@@ -493,6 +522,10 @@ html {
   font-size: 2vw !important;
 }
 
+.font3p5 {
+  font-size: 3.5vw !important;
+}
+
 .leftalign {
   text-align: left !important;
 }
@@ -568,6 +601,8 @@ html {
   visibility: hidden;
 }
 
+input, textarea { display: block; }
+
 @media only screen and (max-width: 767px) {
     .ui.container {
       width: auto !important;
@@ -588,15 +623,15 @@ html {
     }
     
     .fortalecimentobg{
-      background: no-repeat black url('fortalecimento.png') 50% / 60% !important;
+      background: no-repeat black url('fortalecimento2.png') 50% / 60% !important;
     }
     
     .visibilidadebg{
-      background: no-repeat black url('visibilidade.png') 50% / 60% !important;
+      background: no-repeat black url('visibilidade2.png') 50% / 60% !important;
     }
     
     .marketingbg{
-      background: no-repeat black url('marketing.png') 50% / 60% !important;
+      background: no-repeat black url('marketing2.png') 50% / 60% !important;
     }
     
     .fontsize055 {
