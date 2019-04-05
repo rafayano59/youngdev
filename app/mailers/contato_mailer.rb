@@ -1,5 +1,5 @@
 class ContatoMailer < ApplicationMailer
-
+  default :from => 'rafael.yano59@gmail.com'
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
   #
@@ -14,6 +14,6 @@ class ContatoMailer < ApplicationMailer
     @servico = contato.servico
     
     
-    mail to: "rafael.yano59@gmail.com", from: contato.email
+    mail(to: "rafael.yano59@gmail.com", subject: "Solicitando orçamento")
   end
 end
