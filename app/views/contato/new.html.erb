@@ -1,3 +1,9 @@
+<!-- Sidebar Menu -->
+<div class="ui vertical inverted sidebar menu">
+  <a href="/" class="item">Início</a>
+  <a class="active item">Contate-nos</a>
+</div>
+
 <!-- Page Contents -->
 <div class="pusher">
   <div class="ui vertical masthead center aligned segment paddingtopzero bgprincipal">
@@ -124,7 +130,7 @@
               </div>
               
               <div class="field">
-                <%= f.label :message, 'Mensagem' %>
+                <%= f.label :message, 'Mensagem*' %>
                 <%= f.text_area :message, placeholder: 'Descreva seu produto e os recursos adicionais que deseja para sua aplicação.', :required => true, :maxlength => "255", :rows => "2" %>
                 <!--<label>Mensagem</label>
                 <textarea rows="2" id="contato_message" name="contato[message]" placeholder="Descreva seu produto e os recursos adicionais que deseja para sua aplicação." maxlength="300"></textarea>-->
@@ -137,14 +143,15 @@
             <% end %> 
           </div>
           
-          <div class="left aligned column paddingtop3 paddingbottom3">
-              <div id="image-location" class="ui center aligned segment institucionalbg">
+          <div class="center aligned column paddingtop3 paddingbottom3">
+            <div id="image-location">
+              <div class="ui center aligned segment institucionalbg">
                 <h3 class="letrawhite fontmedio marginbottom1">Nossos valores</h3>
                 <p class="font1p8 letrawhite06">
-                  Acreditamos que um bom serviço fornece o maior valor com o menor custo.<br>Desenvolvemos sites com preços a partir de <span class="font3p5 opacity75 tadahome hidden letrapurple">R$475</span><br>
+                  Acreditamos que um bom serviço fornece o maior valor com o menor custo.<br>Desenvolvemos sites com preços a partir de<br><span class="font3p5 opacity75 tadahome hidden letrapurple">R$475</span><br>
                 </p>
               </div>
-            
+            </div>
           </div>
           
         </div>

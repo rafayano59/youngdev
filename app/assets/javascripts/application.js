@@ -159,6 +159,16 @@
               .addClass('active');
         });
         
+        var $root = $('html, body');
+
+        $('a[href^="#"]').click(function () {
+            $root.animate({
+                scrollTop: $( $.attr(this, 'href') ).offset().top
+            }, 500);
+        
+            return false;
+        });
+        
         
         $('#pic-changer').change(function(){ //if the select value gets changed
            var bgSource = $(this).find(':selected').data('bg');
@@ -167,7 +177,7 @@
            if(h3Source){ //if it has data
               $('#image-location').html('<div class="ui segment '+bgSource+'"><h3 class="letrawhite fontmedio marginbottom1">'+h3Source+'</h3><p class="font1p8 letrawhite06">'+pSource+'</p></div>'); // insert image in div image-location
            } else {
-              $('#image-location').html('<div id="image-location" class="ui center aligned segment institucionalbg"><h3 class="letrawhite fontmedio marginbottom1">Nossos valores</h3><p class="font1p8 letrawhite06">Acreditamos que um bom serviço fornece o maior valor com o menor custo.<br>Desenvolvemos sites com preços a partir de <span class="font3p5 opacity75 tadahome letrapurple">R$475</span><br></p></div>'); //remove content from div image-location, thus removing the image
+              $('#image-location').html('<div class="ui center aligned segment institucionalbg"><h3 class="letrawhite fontmedio marginbottom1">Nossos valores</h3><p class="font1p8 letrawhite06">Acreditamos que um bom serviço fornece o maior valor com o menor custo.<br>Desenvolvemos sites com preços a partir de <span class="font3p5 opacity75 tadahome letrapurple">R$475</span><br></p></div>'); //remove content from div image-location, thus removing the image
            }
         })
         
