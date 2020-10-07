@@ -1,3 +1,3 @@
 # README
 
-Teste voltado mais pro design doq pro desempenho
+Teste voltado mais pro front doq pro back
